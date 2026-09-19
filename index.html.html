@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore o incrível mundo das corujas! Conheça as principais espécies,
+    diferenças entre Tytonidae e Strigidae, características e a importância de conservá-las">
+    <title>O Fascinante Mundo das Corujas</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>]
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+    <style>
+       
+       
+        :root {
+            --primary-green: #345035; 
+            --dark-green: #19461c; 
+            --light-green: #bec9bf; 
+            --accent-green: #0d7c11; 
+            --text-dark: #202020;
+            --text-light: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #edf8ed; 
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--dark-green);
+            color: var(--text-light);
+            text-align: center;
+            padding: 2.5rem 0;
+            border-bottom: 6px solid var(--accent-green);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        nav {
+            background-color: var(--primary-green);
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #22422b;
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
+        }
+        section {
+            background-color: #ffffff;
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(46, 125, 50, 0.1);
+            border-left: 6px solid var(--primary-green);
+        }
+
+        section h2 {
+            color: var(--dark-green);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            border-bottom: 2px solid var(--light-green);
+            padding-bottom: 0.5rem;
+        }
+
+        section p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+            font-size: 1.05rem;
+        }
+
+        ul.caracteristicas-lista {
+            list-style-type: square;
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        ul.caracteristicas-lista li {
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+        }
+
+        ul.caracteristicas-lista li strong {
+            color: var(--primary-green);
+        }
+
+        .grid-especies {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.8rem;
+            margin-top: 2rem;
+        }
+
+        .card-especie {
+            background-color: var(--light-green);
+            border: 1px solid #c8e6c9;
+            border-radius: 8px;
+            padding: 1.8rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-especie:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(46, 125, 50, 0.2);
+            border-color: var(--primary-green);
+        }
+
+        .card-especie h3 {
+            color: var(--dark-green);
+            margin-bottom: 0.2rem;
+            font-size: 1.5rem;
+        }
+
+        .card-especie h4 {
+            color: var(--primary-green);
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .card-especie p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+        
+        .card-especie img {
+            width: 100%; 
+            height: 220px; 
+            object-fit: cover;
+            object-position: top;
+            border-radius: 6px; 
+            margin-bottom: 1.2rem;
+        }
+
+        footer {
+            background-color: var(--dark-green);
+            color: var(--text-light);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+            border-top: 6px solid var(--accent-green);
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .destaque {
+            color: var(--primary-green);
+            font-weight: bold;
+            background-color: var(--light-green);
+            padding: 0 4px;
+            border-radius: 3px;
+        }
+        
+        </style>
+</head>
+<body>
+
+    <header>
+        <h1>O Fascinante Mundo das Corujas</h1>
+        <p>Descubra os segredos e as espécies dessas aves misteriosas</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#caracteristicas">Características</a></li>
+            <li><a href="#familias">Famílias</a></li>
+            <li><a href="#especies">Espécies do Mundo</a></li>
+            <li><a href="#conservacao">Conservação</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="introducao">
+            <h2>Introdução às Corujas</h2>
+            <p>
+                Corujas são aves de rapina pertencentes à ordem dos <span class="destaque">Strigiformes</span> 
+                com padrões bastante característicos de comportamento, morfologia e anatomia.
+                Elas são conhecidas por seus hábitos predominantemente noturnos, voo extremamente 
+                silencioso e uma audição e visão extraordinariamente aguçadas. Encontradas em quase todos os 
+                continentes, com exceção da Antártida, essas aves fascinam a humanidade há milênios, sendo 
+                frequentemente associadas à sabedoria, à inteligência e, em algumas culturas, ao mistério da noite.
+            </p>
+            <p>
+                Atualmente, existem cerca de 210 espécies de corujas conhecidas no mundo, divididas 
+                principalmente em duas famílias: <em>Tytonidae</em> (corujas-de-igreja ou suindaras) 
+                e <em>Strigidae</em> (as corujas típicas). Dessa forma, existem dois grandes tipos de corujas. 
+                Agora, dentro de cada família existem inúmeras espécies de corujas, cada uma classificada em diferentes gêneros.
+                No Brasil há uma variedade de 24 espécies de corujas, sendo essas reconhecidas opularmente pelo agrupamento
+                comportamental e de habitat, onde muitas ficam em matas fechadas, outras em prados e outras até mesmo no solo.
+                
+            </p>
+        </section>
+
+        <section id="caracteristicas">
+            <h2>Características Principais</h2>
+            <p>
+                As corujas desenvolveram, ao longo de milhares de anos de evolução, adaptações biológicas 
+                incríveis que as tornam predadoras noturnas implacáveis. Abaixo destacamos os atributos físicos 
+                mais impressionantes:
+            </p>
+            <ul class="caracteristicas-lista">
+                <li>
+                    <strong>Visão Avançada:</strong> Os olhos das corujas são voltados para a frente, além de
+                    serem incrivelmente grandes: mais que o dobro do tamanho dos olhos de outras aves similares.
+                    Como seus olhos são fixos, elas desenvolveram a impressionante capacidade de girar a cabeça em até 270 graus.
+                    No entanto, um fato curioso sobre as corujas é que elas têm hipermetropia, ou seja, não veem bem objetos próximos.
+                </li>
+                <li>
+                    <strong>Audição Excelente e Precisa:</strong> Outra habilidade impressionante é sua
+                    capacidade de ouvir com extrema precisão. Diferente de outros animais, seus ouvidos 
+                    não são simétricos: um está ligeiramente mais alto que o outro. Essa diferença lhes
+                    dá uma vantagem sensorial extraordinária. Por exemplo: quando um rato emite um guincho,
+                    o som chega a cada ouvido em momentos diferentes, mesmo que seja por uma fração de segundo.
+                    Essa mínima diferença basta para a coruja calcular exatamente onde está sua presa, mesmo que não possa vê-la.   
+                    
+                </li>
+                <li>
+                    <strong>Voo Completamente Silencioso:</strong> Corujas tem a capacidade de voar em completo
+                    silêncio, isso é o resultado de uma importante adaptação evolutiva, onde suas asas são
+                    projetadas para reduzir ao máximo o ruído do ar. Isso porque, a terminação das penas de 
+                    suas asas possuem um formato específico. Suas penas estão dispostas em intervalos, dando um 
+                    aspecto chanfrado. Além disso, a superfície de suas asas é coberta por um material aveludado 
+                    que age como um tapete que amortece o som.
+
+                </li>
+                <li>
+                    <strong>Bico e Garras:</strong> Equipadas com bicos curvos e afiados projetados para rasgar 
+                    carne com facilidade, elas contam também com garras muito fortes com unhas encurvadas
+                    e afiadas para capturar e matar as presas.
+                </li>
+            </ul>
+        </section>
+
+        <section id="familias">
+            <h2>As Duas Famílias de Corujas: Tytonidae vs Strigidae</h2>
+            <p>
+                Todas as espécies de corujas catalogadas no mundo são divididas em duas grandes famílias. 
+                Embora compartilhem as mesmas habilidades de predadoras noturnas, a principal diferença visual e 
+                anatômica entre elas está no formato do rosto (conhecido como disco facial) e na estrutura do corpo.
+            </p>
+
+            <div class="comparativo-familias">
+                
+                <div class="familia-box">
+                    <h3>Família Tytonidae</h3>
+                    <h4>(Corujas-das-torres / Suindaras)</h4>
+                    <p>Esta é a família menor, composta por cerca de 20 espécies no mundo todo, esse número cai para 1 espécie em território brasileiro.
+                    Elas possuem uma aparência esbelta, leve e elegante.</p>
+                    <ul>
+                        <li><strong>Disco facial:</strong> Apresenta um disco facial em formato de coração.</li>
+                        <li><strong>Olhos:</strong> Geralmente são menores e de coloração bem escura (negros ou castanhos escuros).</li>
+                        <li><strong>Pernas:</strong> Mais alongadas e finas em proporção ao corpo.</li>
+                        <li><strong>Penas:</strong> Penas menos densas: O corpo delas normalmente tem penas menos densas do que o das outras corujas.</li>
+                    </ul>
+                </div>
+
+
+                <div class="familia-box">
+                    <h3 style="margin-top: 40px;">Família Strigidae</h3>
+                    <h4>(Corujas Verdadeiras)</h4>
+                    <p>É a família mais numerosa e diversificada, abrangendo mais de 200 espécies ao redor do globo, variando de tamanhos minúsculos a aves gigantescas.</p>
+                    <ul>
+                        <li><strong>Disco facial:</strong> Apresenta um formato circular ou ovalado.</li>
+                        <li><strong>Olhos:</strong> São grandes e variam em cores intensas e vibrantes, como amarelo, laranja ou marrom.</li>
+                        <li><strong>Pernas:</strong> Geralmente são mais curtas, grossas e robustas.</li>
+                        <li><strong>Penas:</strong> Muitas espécies (como o Corujão-da-virgínia) possuem penas que imitam chifres ou "falsas orelhas".</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="especies">
+            <h2>Espécies Fascinantes em Destaque</h2>
+            <p>
+                A diversidade de formatos, tamanhos e cores no mundo das corujas é vasta. Conheça abaixo 
+                algumas das espécies mais populares, curiosas e importantes para o ecossistema brasileiro e mundial:
+            </p>
+            
+            <div class="grid-especies">
+                
+                <div class="card-especie">
+                <img src="https://wsrv.nl/?url=https://www.biodiversity4all.org/observations/397928524&output=webp" alt="Coruja-buraqueira" >
+                    <h3>Coruja-buraqueira</h3>
+                    <h4>Athene cunicularia</h4>
+                    <p>
+                        Muito comum de norte a sul no Brasil, esta pequena coruja tem hábitos tanto diurnos 
+                        quanto noturnos. Ela recebe esse nome peculiar por viver em buracos cavados no solo, 
+                        frequentemente aproveitando tocas antigas abandonadas por tatus.
+                    </p>
+                </div>
+
+                <div class="card-especie">
+                <img src="https://wsrv.nl/?url=https://www.biodiversity4all.org/observations/229437873&output=webp" alt="Suindara ou Coruja-das-torres">
+                    <h3>Suindara / Coruja-das-torres</h3>
+                    <h4>Tyto furcata ou Tyto alba</h4>
+                    <p>
+                        Fácil de reconhecer pelo seu disco facial branco em formato perfeito de coração. 
+                        Possui hábitos estritamente noturnos e costuma nidificar em forros de galpões e 
+                        torres de igrejas. Seu grito noturno se assemelha a um tecido rasgando.
+                    </p>
+                </div>
+
+                <div class="card-especie">
+                <img src="https://wsrv.nl/?url=https://wsrv.nl/?url=https://i.pinimg.com/736x/f8/2a/78/f82a78edce7eca53f6e5eead7d690692.jpg&output=webp" alt="Coruja-das-neves">
+                    <h3>Coruja-das-neves</h3>
+                    <h4>Bubo scandiacus</h4>
+                    <p>
+                        Ave nativa das gélidas regiões árticas do planeta. Possui uma plumagem branca, muitas 
+                        vezes imaculada nos machos mais velhos, que oferece camuflagem perfeita na neve. Ao 
+                        contrário da maioria das corujas, frequentemente caça de dia durante o verão ártico.
+                    </p>
+                </div>
+
+                <div class="card-especie">
+                <img src="https://wsrv.nl/?url=https://i1.wp.com/birdscolombia.com/wp-content/uploads/2019/08/bubo-virginianus1.jpg?w=1180&ssl=1&output=webp" alt="Jacurutu ou Corujão-orelhudo">
+                    <h3>Jacurutu</h3>
+                    <h4>Bubo virginianus</h4>
+                    <p>
+                        É uma coruja de grande porte nativa das Américas. É uma ave extremamente adaptável 
+                        com uma vasta distribuição, sendo a mais amplamente distribuída do continente.
+                        Possui densos tufos de penas na cabeça, lembrando chifres. É um grande predador e não 
+                        hesita em caçar presas maiores, incluindo falcões e pequenos mamíferos.
+                    </p>
+                </div>
+
+                <div class="card-especie">
+                <img src="https://wsrv.nl/?url=https://www.ecoregistros.org/site/images/dataimages/2021/02/13/433043/Orejudo-joven.jpg&output=webp" alt="Coruja-orelhuda">
+                    <h3>Coruja-orelhuda</h3>
+                    <h4>Asio clamator</h4>
+                    <p>
+                        Seu nome popular se deve aos longos tufos de penas na cabeça, que se parecem com orelhas. 
+                        Durante o dia, ela usa uma tática formidável de camuflagem: afina o corpo e fecha os 
+                        olhos, mesclando-se perfeitamente com os galhos e cascas das árvores em que descansa.
+                    </p>
+                </div>
+
+                <div class="card-especie">
+                <img src="https://wsrv.nl/?url=https://s3.amazonaws.com/media.wikiaves.com.br/images/462/264470g_5b549b83d591a7f6a4c4c77321f4225f.jpg&output=webp  " alt="Mocho-diabo">
+                    <h3>Mocho-diabo</h3>
+                    <h4>Asio stygius</h4>
+                    <p>
+                        Possui plumagem bastante escura e olhos de um vermelho ou laranja intenso que brilham no 
+                        escuro. Apesar do nome amedrontador e das lendas populares injustas que a cercam, é uma 
+                        ave essencial para a natureza, alimentando-se em grande parte de morcegos, sapos e ratos.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="conservacao">
+            <h2>Importância Ecológica e Conservação</h2>
+            <p>
+                No topo das cadeias alimentares, as corujas são excelentes e inestimáveis "controladores biológicos". 
+                Estudos apontam que apenas uma família de suindaras, por exemplo, pode chegar a devorar milhares de 
+                roedores ao longo do período de criação de seus filhotes. Essa predação natural ajuda a economizar 
+                toneladas de colheitas agrícolas, evitando perdas milionárias e combatendo a proliferação de doenças.
+            </p>
+            <p>
+                Infelizmente, essas aves enfrentam constantes ameaças devido às ações humanas. O desmatamento e 
+                a expansão desordenada destroem os locais onde habitam e nidificam. O uso irracional de pesticidas 
+                e raticidas envenena indiretamente essas aves quando consomem presas intoxicadas. Somam-se a isso 
+                os frequentes atropelamentos nas rodovias, muitas vezes devido à sua técnica de voo baixo ao caçar.
+            </p>
+            <p>
+                Promover a educação ambiental é o passo mais eficiente para salvar as corujas. Precisamos proteger 
+                os remanescentes florestais, utilizar alternativas biológicas ou seguras para o controle de pragas 
+                e, acima de tudo, desmistificar lendas rurais e crendices folclóricas que ainda tratam as corujas 
+                como aves de "mau agouro". Elas são, na verdade, grandes aliadas da humanidade.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 O Fascinante Mundo das Corujas. Desenvolvido para fins educacionais.</p>
+        <p>Preserve a natureza, proteja os ecossistemas e respeite a vida selvagem.</p>
+    </footer>
+
+</body>
+</html>
