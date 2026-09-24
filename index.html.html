@@ -217,17 +217,50 @@
             width: 100%;
             max-height: 400px;
             object-fit: cover;
+            object-position: center;
             border-radius: 8px;
             margin-top: 1.5rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .familia-box {
+            display: flex;
+            flex-direction: column;
         }
 
         .familia-box img {
             width: 100%;
             height: 220px;
             object-fit: cover;
+            object-position: top;
             border-radius: 6px;
-            margin-bottom: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .legenda-imagem {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #555;
+            font-style: italic;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .familia-box h3 {
+            margin-bottom: 5px;
+        }
+
+        .familia-box h4 {
+            font-size: 0.95rem;
+            font-weight: normal;
+            color: #666;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .descricao-familia {
+            min-height: 120px;
+            margin-bottom: 1.5rem;
         }
 
         .comparativo-familias {
@@ -236,6 +269,7 @@
             gap: 2rem;
             margin-top: 1.5rem;
         }
+
 
         @media (max-width: 768px) {
             .comparativo-familias {
@@ -266,7 +300,7 @@
     <main>
         <section id="introducao">
             <h2>Introdução às Corujas</h2>
-            <img src="https://wsrv.nl/?url=https://inaturalist-open-data.s3.amazonaws.com/photos/608978612/original.jpg&output=webp" class="imagem-destaque">
+            <img src="https://wsrv.nl/?url=https://inaturalist-open-data.s3.amazonaws.com/photos/252813356/original.jpg&output=webp" class="imagem-destaque">
 
             <p>
                 Corujas são aves de rapina pertencentes à ordem dos <span class="destaque">Strigiformes</span> 
@@ -279,9 +313,9 @@
             <p>
                 Atualmente, existem cerca de 210 espécies de corujas conhecidas no mundo, divididas 
                 principalmente em duas famílias: <em>Tytonidae</em> (corujas-de-igreja ou suindaras) 
-                e <em>Strigidae</em> (as corujas típicas). Dessa forma, existem dois grandes tipos de corujas. 
+                e <em>Strigidae</em> (as corujas verdadeiras). 
                 Agora, dentro de cada família existem inúmeras espécies de corujas, cada uma classificada em diferentes gêneros.
-                No Brasil há uma variedade de 24 espécies de corujas, sendo essas reconhecidas opularmente pelo agrupamento
+                No Brasil há uma variedade de 24 espécies de corujas, sendo essas reconhecidas popularmente pelo agrupamento
                 comportamental e de habitat, onde muitas ficam em matas fechadas, outras em prados e outras até mesmo no solo.
                 
             </p>
@@ -338,10 +372,11 @@
             <div class="comparativo-familias">
                 
                 <div class="familia-box">
-                    <img src="Suindara-preta.jpg" alt="Suindara-preta">
+                    <img src="Suindara-preta.jpg" alt="Suindara-preta" style="object-position: center;"> 
+                    <p class="legenda-imagem">Suindara-preta (Tyto tenebricosa)</p>
                     <h3>Família Tytonidae</h3>
                     <h4>(Corujas-das-torres / Suindaras)</h4>
-                    <p>Esta é a família menor, composta por cerca de 20 espécies no mundo todo, esse número cai para 1 espécie em território brasileiro.
+                    <p class="descricao-familia">Esta é a família menor, composta por cerca de 20 espécies no mundo todo, esse número cai para 1 espécie em território brasileiro.
                     Elas possuem uma aparência esbelta, leve e elegante.</p>
                     <ul>
                         <li><strong>Disco facial:</strong> Apresenta um disco facial em formato de coração.</li>
@@ -352,10 +387,11 @@
                 </div>
 
                 <div class="familia-box">
-                    <img src="https://wsrv.nl/?url=https://static.inaturalist.org/photos/8252168/original.jpg&output=webp" alt="Coruja-Cinzenta">
+                    <img src="https://wsrv.nl/?url=https://static.inaturalist.org/photos/8252168/original.jpg&output=webp" alt="Coruja-Cinzenta" style="object-position: center;">
+                    <p class="legenda-imagem">Coruja-cinzenta (Strix nebulosa)</p>
                     <h3>Família Strigidae</h3>
                     <h4>(Corujas Verdadeiras)</h4>
-                    <p>É a família mais numerosa e diversificada, abrangendo mais de 200 espécies ao redor do globo, variando de tamanhos minúsculos a aves gigantescas.</p>
+                    <p class="descricao-familia">É a família mais numerosa e diversificada, abrangendo mais de 200 espécies ao redor do globo, variando de tamanhos minúsculos a aves gigantescas.</p>
                     <ul>
                         <li><strong>Disco facial:</strong> Apresenta um formato circular ou ovalado.</li>
                         <li><strong>Olhos:</strong> São grandes e variam em cores intensas e vibrantes, como amarelo, laranja ou marrom.</li>
