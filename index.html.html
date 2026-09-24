@@ -147,6 +147,8 @@
             border-radius: 8px;
             padding: 1.8rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .card-especie:hover {
@@ -169,14 +171,14 @@
         }
 
         .card-especie p {
-            margin-bottom: 0;
+            margin-bottom: 1.5rem;
             font-size: 0.95rem;
         }
         
         .card-especie audio {
             width: 100%;
             height: 35px;
-            margin-top: 1rem;
+            margin-top: auto;
             border-radius: 4px;
         }
 
@@ -219,6 +221,27 @@
             margin-top: 1.5rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
+
+        .familia-box img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 1.2rem;
+        }
+
+        .comparativo-familias {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .comparativo-familias {
+                grid-template-columns: 1fr; 
+            }
+        }
         
         </style>
 </head>
@@ -243,7 +266,8 @@
     <main>
         <section id="introducao">
             <h2>Introdução às Corujas</h2>
-            <img src="https://wsrv.nl/?url=https://inaturalist-open-data.s3.amazonaws.com/photos/349103778/original.jpeg&output=webp" class="imagem-destaque">
+            <img src="https://wsrv.nl/?url=https://inaturalist-open-data.s3.amazonaws.com/photos/608978612/original.jpg&output=webp" class="imagem-destaque">
+
             <p>
                 Corujas são aves de rapina pertencentes à ordem dos <span class="destaque">Strigiformes</span> 
                 com padrões bastante característicos de comportamento, morfologia e anatomia.
@@ -314,6 +338,7 @@
             <div class="comparativo-familias">
                 
                 <div class="familia-box">
+                    <img src="Suindara-preta.jpg" alt="Suindara-preta">
                     <h3>Família Tytonidae</h3>
                     <h4>(Corujas-das-torres / Suindaras)</h4>
                     <p>Esta é a família menor, composta por cerca de 20 espécies no mundo todo, esse número cai para 1 espécie em território brasileiro.
@@ -326,9 +351,9 @@
                     </ul>
                 </div>
 
-
                 <div class="familia-box">
-                    <h3 style="margin-top: 40px;">Família Strigidae</h3>
+                    <img src="https://wsrv.nl/?url=https://static.inaturalist.org/photos/8252168/original.jpg&output=webp" alt="Coruja-Cinzenta">
+                    <h3>Família Strigidae</h3>
                     <h4>(Corujas Verdadeiras)</h4>
                     <p>É a família mais numerosa e diversificada, abrangendo mais de 200 espécies ao redor do globo, variando de tamanhos minúsculos a aves gigantescas.</p>
                     <ul>
