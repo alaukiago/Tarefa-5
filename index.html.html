@@ -276,6 +276,49 @@
                 grid-template-columns: 1fr; 
             }
         }
+
+        .carrossel-container {
+            display: flex;
+            gap: 15px; 
+            overflow-x: auto; 
+            padding-bottom: 15px; 
+
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+
+            scrollbar-width: thin;
+        }
+
+        .carrossel-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        .carrossel-container::-webkit-scrollbar-thumb {
+            background: var(--primary-green);
+            border-radius: 4px;
+        }
+        .carrossel-container::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 4px;
+        }
+
+        .carrossel-item {
+            width: 300px; 
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+            flex-shrink: 0;
+
+            scroll-snap-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .carrossel-item {
+                width: 250px;
+                height: 250px;
+            }
+        }
         
         </style>
 </head>
@@ -291,7 +334,7 @@
             <li><a href="#introducao">Introdução</a></li>
             <li><a href="#caracteristicas">Características</a></li>
             <li><a href="#familias">Famílias</a></li>
-            <li><a href="#especies">Espécies do Mundo</a></li>
+            <li><a href="#especies">Espécies</a></li>
             <li><a href="#alimentacao">Alimentação</a></li>
             <li><a href="#conservacao">Conservação</a></li>
         </ul>
@@ -404,7 +447,7 @@
         </section>
 
         <section id="especies">
-            <h2>Espécies Fascinantes em Destaque</h2>
+            <h2>Espécies</h2>
             <p>
                 A diversidade de formatos, tamanhos e cores no mundo das corujas é vasta. Conheça abaixo 
                 algumas das espécies mais populares, curiosas e importantes para o ecossistema brasileiro e mundial:
@@ -512,17 +555,35 @@
                 As corujas são aves predadoras e por terem hábitos noturnos e sentidos açucados são caçadoras altamente eficientes.
                 Se alimentam de diversos animais e a dieta varia de acordo com a espécie e a região onde vivem.
             </p>
+            
             <ul class="caracteristicas-lista">
                 <li><strong>Pequenos Mamíferos:</strong> Ratos, camundongos e ratazanas formam a base da alimentação da grande maioria das corujas, tornando-as excelentes controladoras de pragas.</li>
                 <li><strong>Insetos e Invertebrados:</strong> Espécies menores, como a Coruja-buraqueira, consomem grandes quantidades de gafanhotos, besouros, escorpiões e aranhas.</li>
                 <li><strong>Outros Animais:</strong> Corujas de grande porte também podem caçar outras aves, cobras, sapos, morcegos e até peixes (como é o caso da Coruja-pescadora).</li>
             </ul>
+
+            <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-green);">Galeria</h3>
+            
+            <div class="carrossel-container">
+                <img src="1.jpg" class="carrossel-item">
+                <img src="2.jpg" class="carrossel-item">
+                <img src="3.jpg" class="carrossel-item">
+                <img src="4.jpeg" class="carrossel-item">
+                <img src="5.jpg" class="carrossel-item">
+                <img src="6.jpg" class="carrossel-item">
+            </div>
+            
+            <p style="text-align: center; font-size: 0.85rem; margin-top: 10px; color: #777; font-style: italic;">
+                Deslize para o lado para ver mais fotos 
+            </p>
+
             <p>
                 <strong>Uma curiosidade digestiva:</strong> As corujas não mastigam. Elas engolem suas presas inteiras ou em grandes pedaços. 
                 Como o estômago não consegue digerir ossos, penas e pelos, esses materiais são compactados em uma espécie de "pelota" chamada <strong>egagrópila</strong>.
                 Algumas horas após a refeição, a coruja regurgita essa pelota. Pesquisadores estudam as pelotas para descobrir exatamente o que a ave comeu sem precisar interferir na natureza.
             </p>
         </section>
+        
 
         <section id="conservacao">
             <h2>Importância Ecológica e Conservação</h2>
