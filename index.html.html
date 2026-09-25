@@ -301,6 +301,24 @@
             border-radius: 4px;
         }
 
+        .carrossel-link {
+            flex-shrink: 0;
+            scroll-snap-align: center;
+            display: block;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .carrossel-item {
+            transition: transform 0.3s ease;
+
+        }
+
+        .carrossel-link:hover .carrossel-item {
+            transform: scale(1.08);
+            cursor: zoom-in;
+        }
+
         .carrossel-item {
             width: 300px; 
             height: 300px;
@@ -569,14 +587,36 @@
             </ul>
 
             <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-green);">Galeria</h3>
-            
+
+            <p style="text-align: center; font-size: 0.85rem; margin-top: 10px; color: #3a3a3a; font-style: italic;">
+                Abaixo algumas fotos de corujas e suas presas, capturadas por fotógrafos e observadores de aves.
+            </p>
+
             <div class="carrossel-container">
+                <a href="1.jpg" target="_blank" class="carrossel-link"></a>
                 <img src="1.jpg" class="carrossel-item">
+                <a href="2.jpg" target="_blank" class="carrossel-link"></a>
                 <img src="2.jpg" class="carrossel-item">
+                <a href="3.jpg" target="_blank" class="carrossel-link"></a>
                 <img src="3.jpg" class="carrossel-item">
+                <a href="4.jpeg" target="_blank" class="carrossel-link"></a>
                 <img src="4.jpeg" class="carrossel-item">
+                <a href="5.jpg" target="_blank" class="carrossel-link"></a>
                 <img src="5.jpg" class="carrossel-item">
+                <a href="6.jpg" target="_blank" class="carrossel-link"></a>
                 <img src="6.jpg" class="carrossel-item">
+                <a href="7.jpeg" target="_blank" class="carrossel-link"></a>
+                <img src="7.jpeg" class="carrossel-item">
+                <a href="8.jpg" target="_blank" class="carrossel-link"></a>
+                <img src="8.jpg" class="carrossel-item">
+                <a href="9.jpg" target="_blank" class="carrossel-link"></a>
+                <img src="9.jpg" class="carrossel-item">
+                <a href="10.jpg" target="_blank" class="carrossel-link"></a>
+                <img src="10.jpg" class="carrossel-item">
+                <a href="11.jpg" target="_blank" class="carrossel-link"></a>
+                <img src="11.jpg" class="carrossel-item">
+                <a href="12.jpg" target="_blank" class="carrossel-link"></a>
+                <img src="12.jpg" class="carrossel-item">
             </div>
             
             <p style="text-align: center; font-size: 0.85rem; margin-top: 10px; color: #777; font-style: italic;">
